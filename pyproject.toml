@@ -1,0 +1,40 @@
+[project]
+name = "knowledge-base"
+version = "0.1.0"
+description = "Knowledge Base Core Infrastructure for Astartes Learning Platform"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+    "sqlalchemy>=2.0",
+    "loguru",
+]
+
+[project.optional-dependencies]
+postgres = [
+    "psycopg2-binary",
+    "pgvector",
+]
+neo4j = [
+    "neo4j",
+]
+all = [
+    "psycopg2-binary",
+    "pgvector",
+    "neo4j",
+]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "pytest-bdd",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
