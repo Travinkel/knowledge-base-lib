@@ -102,6 +102,28 @@ from .prerequisite import (
 # Repository (main entry point)
 from .repository import KnowledgeBaseRepository
 
+# Platinum Layer (research evidence integration)
+from .platinum import (
+    EvidenceQuality,
+    ResearchDomain,
+    PlatinumMetadata,
+    EvidenceQuery,
+    HyperparameterFeedback,
+    EvidenceSynthesis,
+)
+
+# Feedback Store (Bayesian hyperparameter updates)
+from .feedback_store import (
+    FeedbackStore,
+    FeedbackStoreError,
+    FeedbackNotFoundError,
+    PriorUpdateError,
+    BayesianPrior,
+    PriorUpdateResult,
+    SQLiteFeedbackStore,
+    InMemoryFeedbackStore,
+)
+
 
 __all__ = [
     # Models
@@ -154,4 +176,20 @@ __all__ = [
     "MasteryStatus",
     # Repository
     "KnowledgeBaseRepository",
+    # Platinum Layer
+    "EvidenceQuality",
+    "ResearchDomain",
+    "PlatinumMetadata",
+    "EvidenceQuery",
+    "HyperparameterFeedback",
+    "EvidenceSynthesis",
+    # Feedback Store
+    "FeedbackStore",
+    "FeedbackStoreError",
+    "FeedbackNotFoundError",
+    "PriorUpdateError",
+    "BayesianPrior",
+    "PriorUpdateResult",
+    "SQLiteFeedbackStore",
+    "InMemoryFeedbackStore",
 ]
