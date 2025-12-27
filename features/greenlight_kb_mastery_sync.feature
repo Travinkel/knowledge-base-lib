@@ -1,4 +1,4 @@
-﻿@Regression @Domain:Greenlight @Domain:Database @Logic:Adaptive @Status:Stable
+@Regression @Domain:Greenlight @Domain:Database @Logic:Adaptive @Status:Stable
 Feature: Greenlight-KB Mastery Sync
   Goal: Ensure that performance in the IDE (Greenlight) is accurately reflected in the Knowledge Base (Master Ledger) and used for subsequent session planning.
 
